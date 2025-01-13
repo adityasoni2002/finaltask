@@ -68,7 +68,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Atlas Connection String
-const MONGO_URI = "mongodb+srv://adityamavs:Aditya%402002@cluster0.5zjcr.mongodb.net/productsDB?retryWrites=true&w=majority";
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://adityamavs:Aditya%402002@cluster0.5zjcr.mongodb.net/productsDB?retryWrites=true&w=majority";
 
 // Connect to MongoDB
 mongoose
